@@ -1,0 +1,391 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #fff;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+#cursor {
+    height: 15px;
+    width: 15px;
+    background-color: rgb(5, 245, 5);
+    border-radius: 50%;
+    position: fixed;
+    z-index: 99;
+}
+
+#cursor-blur {
+    height: 100px;
+    width: 100px;
+    background-color:rgba(60, 247, 4, 0.664);
+    border-radius: 20%;
+    position: fixed;
+    filter: blur(25px);
+    z-index: 99;
+}
+
+.nav {
+    height: 150px;
+    width: 100%;
+    display: flex;
+    /* background-color: red;  */
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 150px;
+    gap: 50px;
+    position: fixed;
+    z-index: 99;
+}
+
+.nav img {
+    height: 75px;
+}
+
+.nav h4 {
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: fixed;
+}
+
+#main {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.327);
+
+}
+
+#page1 {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+#page1 h1 {
+    font-size: 100px;
+    font-weight: 900;
+}
+
+#page h1::after {
+    content: "EAT. DRINK. PLAY.";
+    position: absolute;
+    color: black;
+}
+
+#page2 h2 {
+    font-size: 100px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+#PAGE1 p {
+    font-size: 100px;
+}
+
+#page2 {
+    min-height: 100vh;
+    width: 100%;
+}
+
+#scoller {
+    /* background-color: red; */
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative;
+    z-index: 10;
+}
+
+#scoller::-webkit-scrollbar {
+    display: none;
+}
+
+#scoller h4 {
+    display: inline-block;
+    font-size: 100px;
+    font-weight: 900;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-right: 10px;
+    -webkit-text-stroke: 2px rgb(105, 231, 1);
+    color: transparent;
+}
+
+#scoller-in {
+    display: inline-block;
+    white-space: nowrap;
+    animation-name: scroll;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#scoller h4:hover {
+    color: rgb(62, 238, 9);
+}
+
+
+@keyframes scroll {
+    from {
+        transform: translate(0);
+    }
+
+    to {
+        transform: translatex(-100%);
+    }
+}
+
+#about-us {
+    height: 40vh;
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    padding: 0 50px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#about-us img {
+    height: 200px;
+    width: 200px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+#about-us-in {
+    width: 50%;
+    text-align: center;
+}
+
+#about-us-in h3 {
+    font-size: 60px;
+    font-weight: 800;
+    margin-bottom: 50px;
+}
+
+#about-us-in p {
+    font-size: large;
+    line-height: 20px;
+}
+
+#cards-container {
+    /* background-color: red; */
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: relative;
+    transition: all ease 0.9s;
+    z-index: 10;
+}
+
+.card {
+    height: 80%;
+    width: 28%;
+    /* background-color: blue; */
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+
+}
+
+#card1 {
+    background-image: url(https://letsgowiththechildren.co.uk/wp-content/uploads/2018/10/mr-mulligans-sidcup-tonbridge-castleford-5-915px.jpg);
+}
+
+#card2 {
+    background-image: url(https://letsgowiththechildren.co.uk/wp-content/uploads/2018/10/mr-mulligans-sidcup-tonbridge-castleford-4-915px.jpg);
+}
+
+#card3 {
+    background-image: url(https://wheretogowithkids.co.uk/wp-content/uploads/2021/11/60809970_665597453853251_7103473679601762304_n.jpg);
+}
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    background-color: rgb(118, 245, 14);
+    padding: 30px;
+    padding-top: 100px;
+    opacity: 0;
+    transition: all ease 0.3s;
+}
+
+.overlay h3 {
+    color: black;
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: 800;
+    align-items: center;
+    white-space: nowrap;
+    margin-bottom: 20px;
+}
+
+.overlay p {
+    color: black;
+    font-size: 16px;
+}
+
+.overlay:hover {
+    opacity: 1;
+}
+
+.overlay:hover {
+    transform: rotate3d(1, 1, 0);
+}
+
+#green-div {
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(to left, rgb(33, 235, 6), green)
+}
+
+#green-div h2 {
+    width: 45%;
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 900;
+    line-height: 50px;
+    text-align: center;
+    color: black;
+    text-transform: uppercase;
+}
+
+#green-div img {
+    height: 100%;
+    object-fit: cover;
+    width: 25%;
+}
+
+#page3 {
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+#page3>p {
+    font-size: 30px;
+    text-align: center;
+    line-height: 50px;
+}
+
+#page3 img {
+    position: absolute;
+    height: 60px;
+}
+
+#page3 #colon1 {
+    left: 20%;
+    top: 25%;
+}
+
+#page3 #colon2 {
+    right: 20%;
+    bottom: 24%;
+}
+
+#page4 {
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+    position: relative;
+}
+
+.elem {
+    height: 70%;
+    width: 30%;
+    overflow: hidden;
+    border-radius: 20px;
+    position: relative;
+}
+
+.elem h1 {
+    height: 100%;
+    width: 100%;
+    background-color: rgb(120, 235, 14);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: #363030;
+    position: absolute;
+    transition: all ease 0.5s;
+    z-index: 10;
+}
+
+.elem img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.elem:hover h1 {
+    color: white;
+    background-color: transparent;
+}
+
+h6 {
+    font-size: 100px;
+    align-items: center;
+    margin-left: 90px;
+}
+
+#footer {
+    height: 40vh;
+    width: 100%;
+    background: linear-gradient(to left, yellow, green, yellow);
+}
+
+.container {
+    max-width: 1100px;
+    /* background-color: blue; */
+    margin: auto;
+}
+
+ul {
+    list-style: none;
+}
+
+.footer {
+    /* background-color: red; */
+
+    padding: 70px 0;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 180px;
+}
+
+.footer-col ul {
+    margin-top: 30px;
+    line-height: 30px;
+}
+.social-links{margin-left: 30px;
+line-height: 50px;}
